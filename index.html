@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="container">
+    <div class="box">
+        <button type="button" class="decrement">-</button>
+        <input type="text" value="0" class="counterValue" readonly>
+        <button type="button" class="increment">+</button> 
+    </div>
+</div>
+
+<script>
+    let decrement = document.querySelector('.decrement');
+    let counter_vlue = document.querySelector('.counterValue');
+    let increment = document.querySelector('.increment');
+    let v = 0;
+
+    increment.onclick = function(){
+        v++;
+        counter_vlue.value = v;
+    }
+    decrement.onclick = function(){
+        if(v == 0){
+            v = 0;
+        }else{
+            v--;
+        counter_vlue.value = v;
+        }
+        
+    }
+</script>
+
+</body>
+</html>
